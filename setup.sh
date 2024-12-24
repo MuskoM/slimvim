@@ -22,7 +22,7 @@ mkdir -p ~/.vim/undodir
 echo "Created undo directory"
 
 # Download .vimrc from GitHub
-download_file "https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/setup.sh" "~/.vimrc"
+download_file "https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/.vimrc" "~/.vimrc"
 
 # Run PlugInstall
 if vim +PlugInstall +qall; then
