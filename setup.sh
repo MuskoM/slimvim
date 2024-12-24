@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
@@ -15,6 +15,6 @@ download_file() {
 }
 
 # Download .vimrc from GitHub
-download_file "https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/.vimrc" "~/.vimrc"
+download_file "https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/.vimrc" "$HOME/.vimrc"
 
 echo "Vim setup complete!"
