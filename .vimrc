@@ -46,6 +46,7 @@ set noshowmode
 filetype plugin indent on
 
 " Color scheme
+set termguicolors
 colorscheme catppuccin_macchiato
 
 " Set colorscheme for lightline
