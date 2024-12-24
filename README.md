@@ -33,7 +33,7 @@ A streamlined, portable Vim configuration with automated setup and teardown scri
 ## Quick Start
 
 ```bash
-curl -s  https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/setup.sh| bash
+curl -s  https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/setup.sh | bash
 # or wget -qO- https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/setup.sh | bash
 ```
 
@@ -45,8 +45,8 @@ Sets up Vim with plugins and configuration.
 
 **Usage:**
 ```bash
-curl -s https://raw.githubusercontent.com/yourusername/yourrepo/main/setup.sh | bash
-# or wget -qO- https://raw.githubusercontent.com/yourusername/yourrepo/main/setup.sh | bash
+curl -s https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/setup.sh | bash
+# or wget -qO- https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/setup.sh | bash
 ```
 
 ### teardown.sh
@@ -55,8 +55,8 @@ Resets the Vim environment by removing plugins and configuration.
 
 **Usage:**
 ```bash
-curl -s https://raw.githubusercontent.com/yourusername/yourrepo/main/teardown.sh | bash
-# or wget -qO- https://raw.githubusercontent.com/yourusername/yourrepo/main/teardown.sh | bash
+curl -s https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/teardown.sh | bash
+# or wget -qO- https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/teardown.sh | bash
 ```
 
 ### .vimrc
