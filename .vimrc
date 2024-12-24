@@ -46,7 +46,10 @@ set noshowmode
 filetype plugin indent on
 
 " Color scheme
-colorscheme catppuccin
+colorscheme catppuccin_macchiato
+
+" Set colorscheme for lightline
+let g:lightline = {'colorscheme': 'catppuccin_mocha'}
 
 " Key mappings
 nnoremap <Esc> :nohlsearch<CR>
