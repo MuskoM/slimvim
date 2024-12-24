@@ -1,4 +1,4 @@
-MIT License
+# MIT License
 
 Copyright (c) 2024 MuskoM
 
@@ -19,3 +19,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+# To summarize:
+- **Use:** Go wild! Use this code for anything.
+- **Modify:** Hack it, tweak it, make it yours.
+- **Distribute:** Share the love, even for profit.
+- **Credit:** Give a shoutout to the original creator (that's me!).
+- **No Warranty:** If it breaks, you get to keep all the pieces.
