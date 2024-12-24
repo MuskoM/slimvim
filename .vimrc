@@ -1,3 +1,14 @@
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+let undo_dir = has('nvim') ? stdpath('data') . '/undo' : '~/.vim/undo'
+if !isdirectory(undo_dir)
+    call mkdir(undo_dir, "p", 0700)
+endif
+
 " Set leader key
 let mapleader = ","
 
