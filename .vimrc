@@ -19,6 +19,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'itchyny/lightline.vim'
 Plug 'mbbill/undotree'
+Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
 " Essential settings
@@ -74,3 +75,19 @@ nnoremap <leader>sf :Files<CR>
 nnoremap <leader>sg :Rg<CR>
 nnoremap <leader><leader> :Buffers<CR>
 nnoremap <leader>sh :History<CR>
+
+" Which-Key setup
+nnoremap <silent> <leader> :WhichKey ','<CR>
+set timeoutlen=500
+
+let g:which_key_map = {}
+let g:which_key_map[','] = 'Last Buffers'
+let g:which_key_map.u = 'Undo Tree'
+let g:which_key_map.s = {
+    \ 'name': '+search',
+    \ 'f': 'in files',
+    \ 'g': 'with ripgrep',
+    \ 'h': 'in history',
+    \ }
+
+call which_key#register(',', "g:which_key_map")
