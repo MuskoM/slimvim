@@ -27,25 +27,55 @@ Plug 'tpope/vim-commentary'
 call plug#end()
 
 " Essential settings
+" Indentations as (4) spaces
 set nocompatible
-syntax on
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" Set line numbers
 set number
 set relativenumber
-set incsearch
-set hlsearch
+
+" Case-insensitive searching UNLESS \C or one or more capital letters in the
+" search terms
 set ignorecase
 set smartcase
-set expandtab
-set shiftwidth=4
-set tabstop=4
-set autoindent
+
+" Decrease time it takes to save a swap file if nothing is typed 
+" See :help crash-recovery
+set updatetime=250
+
+" Use undofile to track changes in a file
+" For more see :help undotree (plugin)
 set undofile
 set undodir=~/.vim/undodir
+
+" Enable wildmenu for command-line completion
+set wildmenu
+
+" Highlight current line
+set cursorline
+
+" Minimal number of screen lines to keep above and below cursor
+set scrolloff=10
+
+" Make searching easier
+set incsearch
+set hlsearch
+set showmatch
+
+" Set reasonable defaults for splits
 set splitbelow
 set splitright
-set showmatch
+
+" Status line config
 set laststatus=2
 set noshowmode
+
+set autoindent
+
+syntax on
 
 " Enable file type detection
 filetype plugin indent on
@@ -59,7 +89,6 @@ let g:lightline = {'colorscheme': 'catppuccin_mocha'}
 
 " Key mappings
 nnoremap <silent> <Esc> :nohlsearch<CR>
-nnoremap <leader>u :UndotreeToggle<CR>
 
 " FZF configurations
 let g:fzf_layout = { 'down': '~40%' }
@@ -73,6 +102,9 @@ if executable('rg')
 else
   command! -bang -nargs=* Rg call fzf#vim#grep("grep -R " . shellescape(<q-args>) . " .", 1, <bang>0)
 endif
+
+" Undotree mappings
+nnoremap <leader>u :UndotreeToggle<CR>
 
 " FZF mappings
 nnoremap <leader>sf :Files<CR>
@@ -95,3 +127,9 @@ let g:which_key_map.s = {
     \ }
 
 call which_key#register(',', "g:which_key_map")
+
+" Netrw config
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
