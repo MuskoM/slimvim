@@ -1,9 +1,21 @@
-# Portable Vim Configuration
+# SlimVim
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/MuskoM/slimvim/releases)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MuskoM/slimvim/blob/master/LICENSE.md)
 
 A streamlined, portable Vim configuration with automated setup and teardown scripts.
+
+## Prerequisites
+
+- `curl` or `wget`
+- Unix-like environment (Linux, macOS, WSL)
+
+## Quick Start
+
+```bash
+curl -s https://raw.githubusercontent.com/MuskoM/slimvim/master/setup.sh | bash
+# or wget -qO- https://raw.githubusercontent.com/MuskoM/slimvim/master/setup.sh | bash
+```
 
 ## Features
 
@@ -12,47 +24,33 @@ A streamlined, portable Vim configuration with automated setup and teardown scri
 - 🎨 Beautiful Catppuccin theme
 - 📊 Sleek status bar with Lightline
 - 🌳 Visual undo history with Undotree
-- ⚡ Optimized for performance
+- 🗝️ Key binding helper with Which Key
+- 🔄 Easy text surrounding with vim-surround
+- 🌈 Enhanced syntax highlighting with vim-polyglot
+- 🐙 Git integration with vim-fugitive
+- 💬 Quick commenting with vim-commentary
 
+## Plugins
 
-## Prerequisites
+SlimVim comes pre-configured with the following plugins:
 
-- `curl` or `wget`
-- Unix-like environment (Linux, macOS, WSL)
+1. **fzf & fzf.vim**: Fuzzy finder for efficient file and content searching.
+2. **catppuccin**: A soothing color scheme for enhanced visual experience.
+3. **lightline.vim**: A light and configurable statusline/tabline.
+4. **undotree**: Visualize and navigate Vim's powerful undo history.
+5. **vim-which-key**: Display available keybindings in a popup.
+6. **vim-surround**: Easily add, change, and delete surrounding characters.
+7. **vim-polyglot**: A collection of language packs for improved syntax highlighting.
+8. **vim-fugitive**: A Git wrapper so awesome, it should be illegal.
+9. **vim-commentary**: Comment stuff out with ease.
 
+## Basic Plugin Usage
 
-## Quick Start
+- **vim-surround**: Use `ys` to add surroundings, `cs` to change, and `ds` to delete.
+- **vim-fugitive**: Use `:G` for git status, `:Gblame` for blame, `:Gdiff` for diff.
+- **vim-commentary**: Use `gcc` to comment out a line, `gc` for a motion.
 
-```bash
-curl -s  https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/setup.sh | bash
-# or wget -qO- https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/setup.sh | bash
-```
-
-## Detailed Overview
-
-### setup.sh
-
-Sets up Vim with plugins and configuration.
-
-**Usage:**
-```bash
-curl -s https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/setup.sh | bash
-# or wget -qO- https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/setup.sh | bash
-```
-
-### teardown.sh
-
-Resets the Vim environment by removing plugins and configuration.
-
-**Usage:**
-```bash
-curl -s https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/teardown.sh | bash
-# or wget -qO- https://raw.githubusercontent.com/MuskoM/slimvim/refs/heads/master/teardown.sh | bash
-```
-
-### .vimrc
-
-Provides a comprehensive Vim configuration. [View .vimrc](https://github.com/MuskoM/slimvim/blob/master/.vimrc)
+For more detailed instructions, use `:help [plugin-name]` in Vim.
 
 ## Customization
 
@@ -68,7 +66,6 @@ To customize the setup:
 
 - **Issue**: Color scheme not working
   **Solution**: Make sure your terminal supports 256 colors
-
 
 ## Contributing
 
