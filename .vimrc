@@ -14,8 +14,8 @@ let mapleader = ","
 
 " Plugin manager
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'itchyny/lightline.vim'
 Plug 'mbbill/undotree'
@@ -58,7 +58,7 @@ colorscheme catppuccin_macchiato
 let g:lightline = {'colorscheme': 'catppuccin_mocha'}
 
 " Key mappings
-nnoremap <Esc> :nohlsearch<CR>
+nnoremap <silent> <Esc> :nohlsearch<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 
 " FZF configurations
